@@ -1,13 +1,14 @@
 body {
 	font-family: 'Ubuntu', sans-serif;
-	background-color: #B9D2EA;
+	background-color: #DEE9FC;
 }
 
 h1 {
 	text-align: center;
-	background-color: #92B8DE;
+	background-color: #84ACF5;
 	padding-top: 1%;
 	padding-bottom: 1%;
+	margin-top: 0;
 }
 
 .socialIcon {
@@ -44,4 +45,10 @@ h1 {
 	display: flex;
 	width: 70%;
 	margin: 0 auto;
+}
+
+#columnContainer > p {
+	width: 90%;
+	margin-left: 1%;
+	margin-right: 1%;
 }
