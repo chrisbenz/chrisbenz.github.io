@@ -1,9 +1,13 @@
 body {
-	font-family: 'Helvetica';
+	font-family: 'Ubuntu', sans-serif;
+	background-color: #B9D2EA;
 }
 
 h1 {
 	text-align: center;
+	background-color: #92B8DE;
+	padding-top: 1%;
+	padding-bottom: 1%;
 }
 
 .socialIcon {
@@ -19,5 +23,22 @@ h1 {
 	display: flex;
 	justify-content: space-evenly;
 	margin: 0 auto;
+	padding-bottom: 1%;
 	width: 300px;
+}
+
+#container {
+	background-color: white;
+	width: 70%;
+	margin: 0 auto;
+}
+
+#profilePicture {
+	width: 200px;
+	height: 200px;
+	padding: 1%;
+}
+
+#columnContainer {
+	display: flex;
 }
