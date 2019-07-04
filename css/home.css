@@ -14,6 +14,8 @@ h1 {
 .socialIcon {
 	width: 50px;
 	height: 50px;
+	margin-left: 10px;
+	margin-right: 10px;
 }
 
 .socialMediaBar > a {
@@ -22,11 +24,11 @@ h1 {
 
 .socialMediaBar {
 	display: flex;
-	justify-content: space-evenly;
+	justify-content: center;
 	margin: 0 auto;
 	padding-bottom: 1%;
 	padding-top: 1%;
-	width: 300px;
+	width: 70%;
 }
 
 #container {
@@ -36,8 +38,8 @@ h1 {
 }
 
 #profilePicture {
-	width: 250px;
-	height: 250px;
+	width: 50%;
+	height: 50%;
 	padding: 2%;
 }
 
