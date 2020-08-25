@@ -1,5 +1,20 @@
 ---
-layout: about
+layout: page
+title: About Me
+permalink: /about/
+tags: about
 ---
 
-Hi there, my name is Chris Benz and I am currently working as a Software Engineer with American Express. While I am currently a software developer by trade, I also enjoy researching cybersecurity topics, pursuing bug bounties, as well as learning new programming languages.
+This Jekyll theme was originally crafted by [John Otander](http://johnotander.com) as [Pixyll](https://github.com/johno/pixyll) and modified by [Sai Kiran Sripada](https://www.saikiransripada.com/).
+
+Checkout the [Github repository](https://github.com/saikiransripada/mixyll) to download it,
+request a feature, report a bug, or contribute. It's free, and open source
+([MIT](http://opensource.org/licenses/MIT)).
+
+Thanks to the following:
+
+* [Pixyll](https://github.com/johno/pixyll)
+* [BASSCSS](http://basscss.com)
+* [Jekyll](http://jekyllrb.com)
+* [Refills](http://refills.bourbon.io/)
+* [Type Scale](http://type-scale.com/)
