@@ -3,7 +3,7 @@ title:       Chris Benz
 email:       cpbenz@protonmail.com
 author:      Chris Benz
 description: "."
-baseurl:     "/home"
+baseurl:     "/"
 url:         "https://chrisbenz.github.io"
 date_format: "%b %-d, %Y"
 header_pages:
