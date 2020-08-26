@@ -62,7 +62,7 @@ text:
     related_posts:  'Related Posts'
     post_footer:    'Lorem ipsum'
   index:
-    coming_soon: 'Coming soon...'
+    coming_soon: ''
   og_locale: 'en_US'
 
 # Build settings
