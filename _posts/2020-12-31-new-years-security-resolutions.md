@@ -1,0 +1,20 @@
+---
+layout: post
+title: "New Years (Security) Resolutions and Review"
+author: "Chris Benz"
+categories: journal
+tags: [documentation,sample]
+image: 
+---
+
+As 2020 comes to a close as one of the most exhausting years in recent memory, I figured now might be as good of a time as ever to review some resolutions with regards to security posture. While many of my own resolutions that I procured at the end of 2019 were stopped dead in their tracks this year due to the COVID-19 pandemic (farewell to a desire of travelling more), I discovered some additional ways of improvement I had not thought of in my initial reflection of 2019 by learning more about the threats posed to individuals and organizations from a security perspective, and what we as individuals can do to improve our security posture to protect our data, accounts, and other resources. 
+
+While many of the "resolutions" noted below consist of tips or tools I currently or have started to include in my own security posture, I've curated the points below to be in a digestable format for family, friends, colleagues, and anyone else looking to learn a little bit more about security and/or better mitigate risk to their personal assets. 
+
+## Improved Password Hygiene
+Considering that passwords remain commonplace from everything to grocery store apps to banking logins, good password hygiene across all surfaces is necessary to ensure that we can keep our accounts secure with a fair amount of security. 
+
+### Pasword Structure
+
+### Pasword Storage
+With a growing amount of services requiring registration for accounts, it is a nearly impossible task to remember all of the credentials a user might need at some point, especially if those credentials are only ever used on occasion. A good password manager ensures that multiple credentials can be stored securely, alleviating the worry of having to remember numerous logins or keep track of logins in an unsecure manner (a piece of paper, the Word doc sitting on your Desktop, etc). Two password managers worth noting are [KeePassXC](https://keepassxc.org/) and [Bitwarden](https://bitwarden.com/), both of which utilize AES-256 bit encryption and which can be hosted locally.
