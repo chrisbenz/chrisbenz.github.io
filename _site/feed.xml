@@ -1,4 +1,88 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-08-01T11:42:37-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Chris Benz</title><subtitle></subtitle><author><name></name></author><entry><title type="html">New Years (Security) Resolutions and Review</title><link href="http://localhost:4000/journal/new-years-security-resolutions.html" rel="alternate" type="text/html" title="New Years (Security) Resolutions and Review" /><published>2020-12-31T00:00:00-07:00</published><updated>2020-12-31T00:00:00-07:00</updated><id>http://localhost:4000/journal/new-years-security-resolutions</id><content type="html" xml:base="http://localhost:4000/journal/new-years-security-resolutions.html">&lt;p&gt;As 2020 comes to a close as one of the most exhausting years in recent memory, I figured now might be as good of a time as ever to review some resolutions with regards to security posture. While many of my own resolutions that I procured at the end of 2019 were stopped dead in their tracks this year due to the COVID-19 pandemic (farewell to a desire of travelling more), I discovered some additional ways of improvement I had not thought of in my initial reflection of 2019 by learning more about the threats posed to individuals and organizations from a security perspective, and what we as individuals can do to improve our security posture to protect our data, accounts, and other resources.&lt;/p&gt;
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.1.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2021-09-29T23:32:11-07:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Chris Benz</title><subtitle></subtitle><author><name></name></author><entry><title type="html">OSINT Hack the Box - Infiltration</title><link href="http://localhost:4000/journal/osint-hack-the-box-infiltration.html" rel="alternate" type="text/html" title="OSINT Hack the Box - Infiltration" /><published>2021-09-29T00:00:00-07:00</published><updated>2021-09-29T00:00:00-07:00</updated><id>http://localhost:4000/journal/osint-hack-the-box-infiltration</id><content type="html" xml:base="http://localhost:4000/journal/osint-hack-the-box-infiltration.html">&lt;p&gt;Apart from many of the other challenges on Hack the Box, some of my favorites that I’ve worked on recently have been from 
+Hack the Box’s OSINT Challenge category. I’m a big fan of information gathering challenges and find open source intelligence
+to be an incredibly interesting topic overall and have found that so far the challenges on Hack the Box do not dissappoint.
+The following is a writeup for the Infiltration challenge I recently completed.&lt;/p&gt;
+
+&lt;h2 id=&quot;the-challenge&quot;&gt;The Challenge&lt;/h2&gt;
+&lt;p&gt;Released just over two years ago, the Infiltration OSINT challenge reads as follows:&lt;/p&gt;
+&lt;blockquote&gt;
+  &lt;p&gt;Can you find something to help you break into the company ‘Evil Corp LLC’. Recon social media sites to see if you can find any useful information.&lt;/p&gt;
+&lt;/blockquote&gt;
+
+&lt;p&gt;With this out of the way (and appreciating the nice reference to Mr. Robot), it’s time to proceed through the challenge.&lt;/p&gt;
+
+&lt;h2 id=&quot;information-gathering&quot;&gt;Information Gathering&lt;/h2&gt;
+
+&lt;p&gt;A quick search on &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Evil Corp LLC&lt;/code&gt; in DuckDuckGo quickly reveals that this organization at the very least has its own Linkedin page.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/linkedin-evil-corp.png&quot; alt=&quot;A DuckDuckGo search result on Evil Corp LLC displaying the top result, a link to its Linkedin page&quot; width=&quot;1000&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;It’s noteworthy that in the description here is a value of text that looks very much like a HTB flag.
+&lt;img src=&quot;/assets/img/linkedin-evil-corp2.png&quot; alt=&quot;The front page of evil corp LLC on Linkedin, featuring a short description, employee count, and buttons for following the compnany on Linkedin or visiting their website.&quot; width=&quot;1000&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I went ahead and decoded the text of this value. As expected, it’s not the flag I’m looking for, but it does appear that I’m on the right track.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/decoded-message.png&quot; alt=&quot;The decoded message of the the value which says: You can do this, keep going!!!&quot; width=&quot;1000&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Moving along to Evil Corp’s posts and other topics, it appears that the organization only has one visible post on their feed. It’s just one post, but with
+multiple interactions from employees at the company, there may be some extra information to gather here. In particular, these two employees here seem to belong to Evil Corp, so there might be some valuable information on their profiles.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/linkedin-members.png&quot; alt=&quot;The comments of two Evil Corp employees, Alia Mccarty and Abel Bullock&quot; width=&quot;1000&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Other than the one interaction on Linkedin, Alia Mccarty’s profile had little additional information. However, a quick Google search 
+on Mccarty shows that she also appears to have a Twitter profile. She has only a few tweets, but one in particular caught my attention, a tweet
+with what appears to be half of a Hack the Box flag.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/alia-mccarty-twitter.png&quot; alt=&quot;A post of Alia Mccarty's with what appears to be half of a HTB flag&quot; width=&quot;1000&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;I looked around the profile a little more, but couldn’t find any other pieces that would connect to this particular piece of text. Since the 
+challenge emphasises actually &lt;em&gt;breaking in&lt;/em&gt; to Evil Corp, I headed back to LinkedIn to look at some more profiles that might have information
+which is more consistent with the challenge description.&lt;/p&gt;
+
+&lt;p&gt;From the original post that Evil Corp made on its Linkedin, I was also able to view Abel Bullock’s profile, but his profile had little additional
+information, and DuckDuckGo and Google searches did not return any other profiles for this particular user.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/abel-bullock-linkedin.png&quot; alt=&quot;The front page of Abel Bullock's profile, fairly non-descriptive&quot; width=&quot;1000&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;With not much else to go on for these users, I returned back to Evil Corp’s page to see if there was a way I could discover any new employees of Evil Corp,
+as supposedly some 53 users are part of the company, so there may be other profiles to look through.&lt;/p&gt;
+
+&lt;p&gt;Something I find interesting about Linkedin’s permissions for viewing profiles is that the ability for a user to view another Linkedin user’s profile is largely
+based on the vector that one takes in order to view a profile. 
+For example, searching for a list of people that are employees of Evil Corp reveals a large list of users that have names ommitted and which are replaced instead
+with the text &lt;code class=&quot;language-plaintext highlighter-rouge&quot;&gt;Linkedin Member&lt;/code&gt;.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/linkedin-members2.png&quot; alt=&quot;A list of Linkedin members with most details except for job title ommitted&quot; width=&quot;1000&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Yet, if a user is viewing the profile of someone such as an Evil Corp employee like Abel Bullock mentioned earlier, Linkedin will graciously offer the names
+of additional profiles that were viewed by other users on Linkedin, some of which appear to be employees of Evil Corp.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/linkedin-members3.png&quot; alt=&quot;&amp;quot;Another list of Linkedin members, this time with details included&amp;quot;&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Notably, Eryn Mcmahon’s profile appears to be included in both this list and the other less detailed list of users noted earlier. Like Abel Bullock and 
+Alia Mccarty’s profiles however, Eryn’s profile seemed to also have very little information.&lt;/p&gt;
+
+&lt;p&gt;Interestingly enough however, a DuckDuckGo search revealed that Eryn does have an Instagram profile, so there may be some additional information here to help 
+with finding the flag.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/eryn-instagram.png&quot; alt=&quot;DuckDuckGo search result showing that Eryn Mcmahon appears to have an Instagram profile&quot; width=&quot;1000&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Right away, one post that sticks out to me features a laptop with what appears to be an employee badge which is mostly visible.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/eryn-instagram2.png&quot; alt=&quot;An overview of Eryn Mcmahon's Instagram profile which consists of mostly stock photos&quot; width=&quot;1000&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Taking a closer look, it looks like the badge in the photo has Eryn’s name, her title at Evil Corp, a barcode, and a long string of text at the bottom which 
+appears to be formatted like a HTB flag.&lt;/p&gt;
+
+&lt;p&gt;&lt;img src=&quot;/assets/img/eryn-instagram3.png&quot; alt=&quot;A picture of one of Eryn Mcmahon's posts&quot; width=&quot;1000&quot; /&gt;&lt;/p&gt;
+
+&lt;p&gt;Faint enough as it is, I enlarged this image using Paint and then entered this flag into the challenge submission. Success! Looks like we’ll be able to infiltrate Evil Corp. Mr. Robot would be proud.&lt;/p&gt;
+
+&lt;h2 id=&quot;closing-thoughts&quot;&gt;Closing thoughts&lt;/h2&gt;
+
+&lt;p&gt;Admittedly, I did find this challenge to be fairly simple overall. However, I still encounter situations like this on a regular basis in my own networks.
+While not necessarily to the extent of this challenge, I do ocasionally see aquaintances and sometimes even close friends being lackadaisical with
+their information when posting to social media. This challenge in particular served as a great reminder that while social media can be an effective tool to share information, we should always aim to be cautious about how much and what type of information we share. Onward to the next challenge!&lt;/p&gt;</content><author><name>Chris Benz</name></author><category term="journal" /><category term="documentation" /><category term="sample" /><summary type="html">Apart from many of the other challenges on Hack the Box, some of my favorites that I’ve worked on recently have been from Hack the Box’s OSINT Challenge category. I’m a big fan of information gathering challenges and find open source intelligence to be an incredibly interesting topic overall and have found that so far the challenges on Hack the Box do not dissappoint. The following is a writeup for the Infiltration challenge I recently completed.</summary></entry><entry><title type="html">New Years (Security) Resolutions and Review</title><link href="http://localhost:4000/journal/new-years-security-resolutions.html" rel="alternate" type="text/html" title="New Years (Security) Resolutions and Review" /><published>2020-12-31T00:00:00-07:00</published><updated>2020-12-31T00:00:00-07:00</updated><id>http://localhost:4000/journal/new-years-security-resolutions</id><content type="html" xml:base="http://localhost:4000/journal/new-years-security-resolutions.html">&lt;p&gt;As 2020 comes to a close as one of the most exhausting years in recent memory, I figured now might be as good of a time as ever to review some resolutions with regards to security posture. While many of my own resolutions that I procured at the end of 2019 were stopped dead in their tracks this year due to the COVID-19 pandemic (farewell to a desire of travelling more), I discovered some additional ways of improvement I had not thought of in my initial reflection of 2019 by learning more about the threats posed to individuals and organizations from a security perspective, and what we as individuals can do to improve our security posture to protect our data, accounts, and other resources.&lt;/p&gt;
 
 &lt;p&gt;While many of the “resolutions” noted below consist of tips or tools I currently or have started to include in my own security posture, I’ve curated the points below to be in a digestable format for family, friends, colleagues, and anyone else looking to learn a little bit more about security and/or better mitigate risk to their personal assets.&lt;/p&gt;
 

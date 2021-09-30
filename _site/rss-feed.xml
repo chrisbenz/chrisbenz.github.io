@@ -7,6 +7,23 @@
 		<atom:link href="/rss-feed.xml" rel="self" type="application/rss+xml" />
 		
 			<item>
+				<title>OSINT Hack the Box - Infiltration</title>
+				
+					<dc:creator>Chris Benz</dc:creator>
+				
+				
+					<description>&lt;p&gt;Apart from many of the other challenges on Hack the Box, some of my favorites that I’ve worked on recently have been from 
+Hack the Box’s OSINT Challenge category. I’m a big fan of information gathering challenges and find open source intelligence
+to be an incredibly interesting topic overall and have found that so far the challenges on Hack the Box do not dissappoint.
+The following is a writeup for the Infiltration challenge I recently completed.&lt;/p&gt;
+</description>
+				
+				<pubDate>Wed, 29 Sep 2021 00:00:00 -0700</pubDate>
+				<link>http://localhost:4000/journal/osint-hack-the-box-infiltration.html</link>
+				<guid isPermaLink="true">http://localhost:4000/journal/osint-hack-the-box-infiltration.html</guid>
+			</item>
+		
+			<item>
 				<title>New Years (Security) Resolutions and Review</title>
 				
 					<dc:creator>Chris Benz</dc:creator>
